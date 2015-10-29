@@ -1,1 +1,1 @@
-var actions = require('src/actions');
+var actions  = require('./actions');
