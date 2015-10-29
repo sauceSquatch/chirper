@@ -8,15 +8,14 @@ Object.keys(constants).forEach(function (key) {
         return word[0] + word.slice(1).toLowerCase();
     }).join('');
 
-    console.log("actions funcName: ", funcName);
-
-    // exports[funcName] = function (data) {
-    //     dispatcher.dispatch({
-    //         actionType: constants[key],
-    //         data: data
-    //     });
-    // };
+    exports[funcName] = function (data) {
+        dispatcher.dispatch({
+            actionType: constants[key],
+            data: data
+        });
+    };
 });
+
 
 // exports.chirp = function (data) {
 //   dispatcher.dispatch({
